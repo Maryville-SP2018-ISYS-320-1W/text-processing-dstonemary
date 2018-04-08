@@ -1,7 +1,7 @@
 /*
-	ISYS 320
-	Name(s):
-	Date: 
+  	ISYS 320
+  	Name(s): Derek Stone
+  	Date:    April-08-2018
 */
 
 import java.util.Scanner;
@@ -13,9 +13,15 @@ public class P4_LongestInputString {
 		
 		System.out.print("How many words will you enter? ");
 		int numOfWords = input.nextInt();
+		String longStr = "";
+		for(int i = 1; i <= numOfWords; i++){
+			System.out.print("Enter word " + i + ": ");
+			String word = input.next();
+			if(longStr.length() <= word.length())
+				longStr = word;
+		}
 		
-		String longestWord = "";
-		System.out.printf("The longest word was \"%s\".\n", longestWord );
+		System.out.print("The longest word was "+longStr );
 	}
 	
 }

@@ -1,9 +1,10 @@
 /*
-	ISYS 320
-	Name(s):
-	Date: 
+  	ISYS 320
+  	Name(s): Derek Stone
+  	Date:    April-08-2018
 */
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class P5_AvgToTwoPlaces {
@@ -23,8 +24,9 @@ public class P5_AvgToTwoPlaces {
 			
 			sum += nextInputValue;
 		}
-		
-		System.out.println("The average value is: " + sum / numbers);
+		DecimalFormat format = new DecimalFormat("##.00");
+		 String average  = format.format(sum / numbers);
+		System.out.println("The average value is: " +average );
 	}
 
 }
